@@ -1,0 +1,178 @@
+body {
+    background-image: url("https://www.agoda.com/wp-content/uploads/2024/02/Manhattan-USA.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #fff;
+    overflow: hidden;
+}
+/*==== NAVIGATION BAR ====*/
+
+.nav{
+    width: 100vw;
+    height: 50px;
+    background-image:  linear-gradient(to right, #0a2846 , #161a1e93, #140f1d37);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: solid 2px#ffffff;
+}
+
+.navi{
+    height: 100%;
+    width: 33vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.navi ul{
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+}
+.navi li {
+    list-style: none;
+}
+.navi li a {
+    text-decoration: none;
+    color: #fff;  
+}
+.logo{
+    height: 100%;
+    object-fit: contain;
+}
+.searchForm{
+  display:flex;
+  flex-direction:row;
+  align-items: center;
+  border:1px solid grey;
+  padding:1px;
+  gap: 5px;
+  background-color: #f1f1f1;
+  width: 80%;
+  height: 70%;
+  border-radius: 20px;
+}
+.searchInput{
+    flex-grow: 2;
+    border: none;
+    background: none;
+    margin-left: 10px;
+
+}
+.searchForm:focus-within { 
+  outline: 1px solid rgb(24, 138, 205); 
+}
+
+.searchInput:focus {
+  outline: none;
+}
+
+.btnSearch{
+     border:1px solid rgb(194, 255, 234);
+  background:rgb(24, 138, 205);
+  color:white;
+  width: 20%;
+  height: 80%;
+  border-radius: 8px;
+}
+.btnSearch:hover{
+    background: #333;
+    font-weight: bold;
+}
+.clear{
+    margin-right: 5px;
+}
+    /*==== MAIN =====*/
+
+.hero{
+    display: flex;
+
+}
+
+.socialIcons{
+    background-color: #0a2846;
+    width: 70px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+.socialIconsLogo{
+    width: 50%;
+    border-radius: 10px;
+}
+.socialIconsLogo:hover{
+    box-shadow: 0 0 8px #ffffff;
+    scale: 1.1;
+
+}
+
+.header{
+    padding: 20px;
+    width: 60vw;
+    background-image:  linear-gradient(to right, #0a2846 , #161a1e93, #140f1d00);
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 60px;
+}
+.header h1{
+    font-size: 4rem;
+}
+
+.bookBtn{
+      border:1px solid rgb(194, 255, 234);
+  background:rgb(24, 138, 205);
+  color:white;
+  width: 130px;
+  height: 40px;
+  border-radius: 8px;
+}
+.bookBtn:hover{
+    background: #333;
+    font-weight: bold;
+}
+
+/*=====Card=====*/
+
+.results{
+    height: 94vh;
+    width: 30vw;
+    overflow: scroll;
+}
+
+.results::-webkit-scrollbar{
+    display: none;
+}
+.cardContent{
+    padding: 10px;
+    background-color: #f1f1f1;
+   border-radius: 20px;
+   display: flex;
+   flex-direction: column;
+   width: 20vw;
+   margin: 10px;
+   color: #333;
+   
+
+}
+.cardContent:hover{
+    box-shadow: 0 0 8px #0a2846;
+}
+.cardContent p {
+    color: #8c8c8c;
+}
+.cardContent img {
+    border-radius: 10px;
+}
