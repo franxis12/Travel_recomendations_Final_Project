@@ -4,6 +4,8 @@ document.getElementById("searchForm").addEventListener("submit", function (e){
     const keyword = document.getElementById("searchInput").value.trim().toLowerCase();
     const resultsDiv = document.getElementById("results");
 
+    
+
     fetch("./travel_recommendation_api.json")
     .then(res => res.json())
     .then(data => {
@@ -32,6 +34,7 @@ document.getElementById("searchForm").addEventListener("submit", function (e){
             <img src="${place.imageUrl}" alt="${place.name}" class="cardImg">
             <p>${place.description}</p>
             <button class="cardBtn btnSearch">Visit</button>
+
             
             `;
             
@@ -49,3 +52,38 @@ document.getElementById("clearBtn").addEventListener("click", () => {
   document.getElementById("searchInput").value = "";
   document.getElementById("results").innerHTML = "";
 });
+
+document.getElementById("formContact").addEventListener("submit", function(l){
+    l.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    if(name != "" && email != "" && message != "") {
+        const form = document.getElementById("formContact");
+        const header = document.getElementById("headerContactForm");
+        const ul = document.createElement("ul");
+        const liName = document.createElement("li");
+        const liEmail = document.createElement("li");
+        const liMessage = document.createElement("li"); 
+        const customnMessage = document.createElement("p");
+
+        liName.textContent = name;
+        liEmail.textContent = email;
+        liMessage.textContent = message;
+        form.style.display = "none";
+
+        customnMessage.innerHTML = `${name}, your message was sent successfully. 
+        As soon as we review it, we'll contact you via email (${email}).`
+      
+
+        ul.appendChild(liName);
+        ul.appendChild(liEmail);
+        ul.appendChild(liMessage);
+        header.appendChild(ul);
+        header.appendChild(customnMessage)
+    } else {
+        alert("Please complete all field");
+    }
+})
