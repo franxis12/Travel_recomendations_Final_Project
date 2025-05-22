@@ -20,7 +20,11 @@
             </ul>
         </div>
         <div class="navi right">
-           
+           <form class="searchForm" id="searchForm" style="display: none;">
+                <input id="searchInput" class="searchInput" type="search" placeholder="Enter a destination or keyword">
+                 <button class="btnSearch" type="submit">Search</button>
+                <button class="btnSearch clear" type="button" id="clearBtn">Clear</button>
+            </form>
         </div>
     </nav>
 
@@ -33,18 +37,59 @@
 
             
         </div>
-        <div class="header">
-            <h1>ABOUT US <br>DREAM <br>DESTINATION</h1>
-            <p>It encourages explorationof unfamiliar<br>
-                 territories, embracing diverse
-                cultures and <br>
-                landscapes, while ppursuing the desired <br>
-                designation that 
-                captivates the heart and<br> ignites a sense of wonder.
+        <div class="headerContact">
+            <h1>ABOUT US</h1>
+            <div class="aboutText">
+            <p>Welcome to Our Company! We are a team 
+                of passionate individuals dedicated to providing
+                 excellent services/products to our customers. Our 
+                 mission is to
+                provide the best experience for people traveling to different 
+                destinations around the world. Our values include integrity, 
+                 innovation, customer satisfaction, and teamwork We believe in putting our customers first and working together to achieve
+                 our goals.
+               Feel free to explore our website to learn more about what we offer!
             </p>
-            <button class="bookBtn">BOOK NOW</button>
+            </div>
+
+            <div class="contactCardsDiv">
+                <h2>Our <br>Team</h2>
+                <div class="contactCard">
+                    <div class="divImg">
+                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
+                    </div>
+                    <div class="personContact">
+                        <h4>John Doe</h4>
+                        <p>John Doe is responsible for...</p>
+                        <button class="btnContact">CEO</button>
+                    </div>
+
+                </div>
+                <div class="contactCard">
+                    <div class="divImg">
+                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
+                    </div>
+                    <div class="personContact">
+                        <h4>Celina Thomas</h4>
+                        <p>Celina Thomas is responsible for...</p>
+                        <button class="btnContact">Team Lead</button>
+                    </div>
+
+                </div>
+                <div class="contactCard">
+                    <div class="divImg">
+                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
+                    </div>
+                    <div class="personContact">
+                        <h4>Mike Tysen</h4>
+                        <p>Mike Tysen is responsible for...</p>
+                        <button class="btnContact">Delivery Head</button>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
-        <div class="results" id="results">
            
             <script src="/travel_recommendation.js"></script>
 

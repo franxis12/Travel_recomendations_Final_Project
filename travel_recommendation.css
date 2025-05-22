@@ -42,6 +42,12 @@ body {
     text-decoration: none;
     color: #fff;  
 }
+.nav li a:hover{
+    font-size: 1.1rem;
+    display: inline-block;
+    color: #4b97e4;
+
+}
 .logo{
     height: 100%;
     object-fit: contain;
@@ -175,4 +181,140 @@ body {
 }
 .cardContent img {
     border-radius: 10px;
+}
+
+.headerContact{
+    padding: 20px;
+    width: 80vw;
+    background-image:  linear-gradient(to right, #0a2846 , #161a1e93, #140f1d00);
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 60px;
+}
+.headerContact h1{
+    font-size: 4rem;
+}
+
+.aboutText{
+    background-color: #333333a1;
+    width: 60vw;
+    margin-left: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.contactCardsDiv{
+    display: flex;
+    padding: 30px;
+    margin-left: 180px;
+        gap: 20px;
+
+
+}
+.contactCardsDiv h2{
+    font-size: 3rem;
+}
+
+.contactCard{
+    background-color: #33333381;
+    border-radius: 15px;
+    width: 15vw;
+    display: flex;
+    gap: 10px;
+    border: solid 1px #ffffff3f;
+}
+.divImg{
+    width: 20%;
+    height: auto;
+
+    
+}
+.personContact{
+    margin-right: 10px;
+}
+.btnContact{
+    background-color: #0f93d1;
+    border: none;
+    width: 100%;
+    height: 30px;
+    color: #f1f1f1;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 10px;
+    border: solid 1px #fff;
+}
+.btnContact:hover{
+    background-color: #333;
+}
+.iconContact{
+    width: 70%;
+    margin-top: 10px;
+    margin-left: 10px;
+    
+}
+
+.headerContactForm{
+    padding: 20px;
+    width: 100vw;
+    background-image:  linear-gradient(to right, #0a2846 , #161a1e93, #140f1d00);
+    display: flex;
+align-items: center;
+    justify-content: center;
+    padding-left: 60px;
+    gap: 20px;
+}
+
+.headerContactForm h1{
+    font-size: 4rem;
+}
+.formClass{
+    background-color: #33333386;
+    width: 50vw;
+    height: 50vh;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 20px;
+    gap: 10px;
+    border: solid 1px #ffffff3e;
+}
+.inputForm{
+    height: 30px;
+    background-color: #3333;
+    border-radius: 10px;
+    border: solid 1px #fff;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.textareaForm{
+    height: 40%;
+    background-color: #3333;
+    border-radius: 10px;
+    border: solid 1px #fff;
+    max-height: 200px;
+    min-height: 199px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.btnForm{
+    height: 30px;
+    border-radius: 10px;
+    background-color: #0f93d1;
+    border: none;
+    width: 100%;
+    color: #f1f1f1;
+    font-weight: bold;
+    margin-top: 20px;
+    border: solid 1px #fff;
+}
+.btnForm:hover{
+    background-color: #333;
 }
