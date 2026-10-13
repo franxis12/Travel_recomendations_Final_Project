@@ -1,62 +1,194 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TravelBloom</title>
-    <link rel="stylesheet" href="./travel_recommendation.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="navi left">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/7893/7893979.png">
-            <h1>TravelBloom</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a2846" />
+    <meta
+      name="description"
+      content="Questions or ideas for TravelBloom? Preview a message and find the creator of this travel discovery project."
+    />
+    <title>Get in touch — TravelBloom</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./travel_recommendation.css" />
+    <script src="./travel_recommendation.js" type="module"></script>
+  </head>
+  <body class="inner-page" id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header inner-header">
+      <div class="container nav-inner">
+        <a class="brand" href="./index.html" aria-label="TravelBloom home"
+          ><svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#compass" /></svg
+          ><span>travel<span class="brand-light">bloom</span><i>.</i></span></a
+        >
+        <nav id="main-navigation" aria-label="Main navigation">
+          <a href="./index.html">Home</a><a href="./about.html">Our story</a
+          ><a href="./contact.html" aria-current="page">Get in touch</a>
+        </nav>
+        <a class="nav-explore" href="./index.html#destinations"
+          >Let’s explore
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#arrow-up" /></svg></a
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#menu" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="container contact-layout">
+        <div class="contact-intro">
+          <p class="eyebrow">GET IN TOUCH</p>
+          <h1>
+            Every good journey<br />starts with a<br /><em>conversation.</em>
+          </h1>
+          <p>
+            A question, a suggestion, or a place you think deserves a spot? We’d
+            love to know what’s on your mind.
+          </p>
+          <div class="contact-photo">
+            <img
+              src="./assets/copacabana.jpg"
+              alt="Copacabana Beach and Rio de Janeiro’s coastline"
+              width="1366"
+              height="768"
+              loading="lazy"
+            /><span
+              ><svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#pin" />
+              </svg>
+              Rio de Janeiro, Brazil</span
+            >
+          </div>
         </div>
-        <div class="navi center">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
+        <div class="contact-card">
+          <span class="contact-card-icon"
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#mail" /></svg
+          ></span>
+          <h2>A little hello goes a long way.</h2>
+          <p class="contact-demo-note">
+            This is a portfolio demo. Preview or copy your message below;
+            nothing is sent or stored.
+          </p>
+          <form id="formContact">
+            <label for="name"
+              >Your name<input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Alex Morgan"
+                autocomplete="name"
+                required
+                minlength="2"
+                maxlength="100" /></label
+            ><label for="email"
+              >Email address<input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="alex@example.com"
+                autocomplete="email"
+                required
+                maxlength="254" /></label
+            ><label for="message"
+              >What’s on your mind?<textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell us about your idea…"
+                required
+                maxlength="3000"
+              ></textarea></label
+            ><button class="button" type="submit">
+              Preview your message
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#arrow" />
+              </svg>
+            </button>
+          </form>
+          <div id="messagePreview" class="message-preview" hidden>
+            <h3>Your message preview</h3>
+            <pre id="messageDraft" tabindex="0"></pre>
+            <div>
+              <button
+                id="copyMessage"
+                type="button"
+                class="button button-small"
+              >
+                Copy message
+                <svg class="icon" aria-hidden="true">
+                  <use href="./assets/icons.svg#copy" />
+                </svg></button
+              ><button id="editMessage" type="button" class="text-link">
+                Keep editing
+              </button>
+            </div>
+          </div>
+          <p
+            id="contactStatus"
+            class="contact-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+          <a
+            class="creator-link"
+            href="https://github.com/franxis12"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Find the creator on GitHub
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow-up" /></svg
+          ></a>
         </div>
-        <div class="navi right">
-           <form class="searchForm" id="searchForm" style="display: none;">
-                <input id="searchInput" class="searchInput" type="search" placeholder="Enter a destination or keyword">
-                 <button class="btnSearch" type="submit">Search</button>
-                <button class="btnSearch clear" type="button" id="clearBtn">Clear</button>
-            </form>
-        </div>
-    </nav>
-
-    <main class="hero">
-        <div class="socialIcons">
-            <img class="socialIconsLogo" src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:218,cw:563,ch:563,q:80,w:563/z3bn6deaxmrjmQHNEkpcZE.jpg">
-            <img class="socialIconsLogo" src="https://cdn-icons-png.flaticon.com/256/124/124010.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png">
-
-            
-        </div>
-        <div class="headerContactForm" id="headerContactForm">
-            <h1>CONTACT US</h1>
-            
-            
-            <form class="formClass" id="formContact">
-                <label for="name">Name</label>
-                <input type="text" id="name" class="inputForm" placeholder="Enter your name">
-                <label for="email">Email</label>
-                <input type="email" id="email" class="inputForm" placeholder="Enter your email">
-                <label for="message">Message</label>
-                <textarea id="message" class="textareaForm" placeholder="Enter your message"></textarea>
-                <button class="btnForm" type="submit" id="submitBtn">Submit</button>
-            </form>
-            
-        </div>
-           
-            <script src="./travel_recommendation.js"></script>
-
-        </div>
-
+      </section>
     </main>
-</body>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="brand" href="./index.html" aria-label="TravelBloom home"
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#compass" /></svg
+            ><span
+              >travel<span class="brand-light">bloom</span><i>.</i></span
+            ></a
+          >
+          <p>A little curiosity. A whole world to discover.</p>
+          <a href="#top" class="back-top"
+            >Back to top
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow-up" /></svg
+          ></a>
+        </div>
+        <div class="footer-bottom">
+          <span>TravelBloom · A travel discovery project</span>
+          <div>
+            <a href="./about.html#photography">Photo credits</a
+            ><a
+              href="https://github.com/franxis12/Travel_recomendations_Final_Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View source ↗</a
+            ><span
+              >Built by
+              <a
+                href="https://github.com/franxis12"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Francis Martinez ↗</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

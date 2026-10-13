@@ -1,59 +1,357 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - TravelBloom </title>
-    <link rel="stylesheet" href="./travel_recommendation.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="navi left">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/7893/7893979.png">
-            <h1>TravelBloom</h1>
-        </div>
-        <div class="navi center">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="navi right">
-            <form class="searchForm" id="searchForm">
-                <input id="searchInput" class="searchInput" type="search" placeholder="Enter a destination or keyword">
-                 <button class="btnSearch" type="submit">Search</button>
-                <button class="btnSearch clear" type="button" id="clearBtn">Clear</button>
-            </form>
-        </div>
-    </nav>
-
-    <main class="hero">
-        <div class="socialIcons">
-            <img class="socialIconsLogo" src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:218,cw:563,ch:563,q:80,w:563/z3bn6deaxmrjmQHNEkpcZE.jpg">
-            <img class="socialIconsLogo" src="https://cdn-icons-png.flaticon.com/256/124/124010.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png">
-
-            
-        </div>
-        <div class="header">
-            <h1>EXPLORE <br>DREAM <br>DESTINATION</h1>
-            <p>It encourages explorationof unfamiliar<br>
-                 territories, embracing diverse
-                cultures and <br>
-                landscapes, while ppursuing the desired <br>
-                designation that 
-                captivates the heart and<br> ignites a sense of wonder.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a2846" />
+    <meta
+      name="description"
+      content="Discover beaches, cities, and cultural landmarks with TravelBloom. A little inspiration for your next adventure."
+    />
+    <title>Discover your next somewhere — TravelBloom</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./travel_recommendation.css" />
+    <script src="./travel_recommendation.js" type="module"></script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container nav-inner">
+        <a class="brand" href="./index.html" aria-label="TravelBloom home"
+          ><svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#compass" /></svg
+          ><span>travel<span class="brand-light">bloom</span><i>.</i></span></a
+        >
+        <nav id="main-navigation" aria-label="Main navigation">
+          <a href="./index.html" aria-current="page">Home</a
+          ><a href="./about.html">Our story</a
+          ><a href="./contact.html">Get in touch</a>
+        </nav>
+        <a class="nav-explore" href="./index.html#destinations"
+          >Let’s explore
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#arrow-up" /></svg></a
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#menu" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <img
+          class="hero-image"
+          src="./assets/new-york.jpg"
+          alt="New York City’s waterfront skyline at sunset"
+          fetchpriority="high"
+          width="1920"
+          height="1080"
+        />
+        <div class="hero-shade"></div>
+        <div class="container hero-layout">
+          <div class="hero-copy">
+            <p class="eyebrow">
+              <span class="eyebrow-line"></span> FOR THE CURIOUS AT HEART
             </p>
-            <button class="bookBtn">BOOK NOW</button>
+            <h1 id="hero-title">The world is<br />full of <em>wonder.</em></h1>
+            <p class="hero-description">
+              Find the places that make you pause.<br />The cultures that move
+              you. The moments<br class="desktop-break" />
+              you’ll carry long after you’re home.
+            </p>
+            <a class="button" href="#destinations"
+              >Find your next escape
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#arrow" /></svg></a
+            ><a class="hero-scroll" href="#destinations"
+              ><span
+                ><svg class="icon" aria-hidden="true">
+                  <use href="./assets/icons.svg#arrow-down" /></svg
+              ></span>
+              A new perspective is just a scroll away</a
+            >
+          </div>
+          <div class="hero-location">
+            <span class="location-rule"></span>
+            <p class="eyebrow">A DIFFERENT POINT OF VIEW</p>
+            <h2>New York, <em>United States</em></h2>
+            <span
+              ><svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#pin" />
+              </svg>
+              Where the city meets the horizon.</span
+            >
+          </div>
         </div>
-        <div class="results" id="results">
-           
-            <script src="./travel_recommendation.js"></script>
-
+        <div class="hero-bottom">
+          <span>EXPLORE / DREAM / DISCOVER</span
+          ><span>01 <i></i> A world of possibility</span>
         </div>
-
+      </section>
+      <section
+        class="container discovery-section"
+        id="destinations"
+        aria-labelledby="discovery-title"
+      >
+        <form class="search-form" id="searchForm" role="search">
+          <div class="search-icon">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#compass" />
+            </svg>
+          </div>
+          <div class="search-field">
+            <label for="searchInput">WHERE DOES YOUR CURIOSITY TAKE YOU?</label
+            ><input
+              type="search"
+              id="searchInput"
+              name="destination"
+              placeholder="A city, a country, a little inspiration…"
+              autocomplete="off"
+              aria-describedby="searchHint"
+            />
+          </div>
+          <button
+            class="clear-search"
+            type="button"
+            id="clearBtn"
+            aria-label="Clear search and filters"
+            title="Clear search and filters"
+            hidden
+          >
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#close" />
+            </svg></button
+          ><button class="button search-submit" type="submit">
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#search" /></svg
+            ><span>Explore</span>
+          </button>
+        </form>
+        <p class="search-hint" id="searchHint">
+          A place in mind? Try
+          <button type="button" data-query="Japan">Japan</button>,
+          <button type="button" data-query="beaches">beaches</button>, or
+          <button type="button" data-query="temples">temples</button>.
+        </p>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">GOOD PLACES. GREAT POSSIBILITIES.</p>
+            <h2 id="discovery-title">Find your kind of <em>somewhere.</em></h2>
+          </div>
+          <p>
+            Slow mornings by the sea or a city that never stops.<br
+              class="desktop-break"
+            />
+            There’s a little something for every kind of explorer.
+          </p>
+        </div>
+        <div class="filter-bar">
+          <div
+            class="category-filters"
+            role="group"
+            aria-label="Filter destinations"
+          >
+            <button type="button" data-category="all" aria-pressed="true">
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#grid" /></svg
+              >All destinations</button
+            ><button type="button" data-category="beach" aria-pressed="false">
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#waves" /></svg
+              >Beaches</button
+            ><button type="button" data-category="city" aria-pressed="false">
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#city" /></svg
+              >City escapes</button
+            ><button type="button" data-category="culture" aria-pressed="false">
+              <svg class="icon" aria-hidden="true">
+                <use href="./assets/icons.svg#landmark" /></svg
+              >Culture & landmarks
+            </button>
+          </div>
+          <p
+            id="resultCount"
+            class="result-count"
+            role="status"
+            aria-live="polite"
+          >
+            Finding your next adventure…
+          </p>
+        </div>
+        <div class="destination-grid" id="results" aria-busy="true"></div>
+        <div class="load-more-wrap">
+          <button
+            id="loadMore"
+            type="button"
+            class="button button-outline"
+            hidden
+          >
+            Show more destinations
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow-down" />
+            </svg>
+          </button>
+        </div>
+        <noscript
+          ><p class="empty-state">
+            Enable JavaScript to search the destination collection.
+          </p></noscript
+        >
+      </section>
+      <section class="container journal-section">
+        <div class="journal-image">
+          <img
+            src="./assets/kyoto.jpg"
+            alt="Traditional street and pagoda in Kyoto, Japan"
+            width="1200"
+            height="800"
+            loading="lazy"
+          /><span
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#pin" />
+            </svg>
+            Kyoto, Japan</span
+          >
+          <div class="journal-stamp" aria-hidden="true">
+            TAKE THE<br /><em>scenic</em><br />ROUTE
+          </div>
+        </div>
+        <div class="journal-copy">
+          <p class="eyebrow">MORE THAN A PIN ON A MAP</p>
+          <h2>Go a little further.<br /><em>Feel a little more.</em></h2>
+          <p>
+            Travel isn’t just about getting somewhere. It’s the quiet side
+            street, the unfamiliar flavor, and the story you didn’t expect to
+            find.
+          </p>
+          <p>
+            We’re here to spark that first bit of curiosity. You decide where it
+            takes you.
+          </p>
+          <a class="text-link" href="./about.html"
+            >Get to know TravelBloom
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow" /></svg
+          ></a>
+        </div>
+      </section>
+      <section class="travel-values">
+        <div class="container">
+          <article>
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#compass" />
+            </svg>
+            <div>
+              <h3>Follow your curiosity</h3>
+              <p>Discover a destination that feels like you.</p>
+            </div>
+          </article>
+          <article>
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#globe" />
+            </svg>
+            <div>
+              <h3>A fresh perspective</h3>
+              <p>From familiar favorites to somewhere new.</p>
+            </div>
+          </article>
+          <article>
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#heart" />
+            </svg>
+            <div>
+              <h3>Make it meaningful</h3>
+              <p>Collect moments. Come home with stories.</p>
+            </div>
+          </article>
+        </div>
+      </section>
     </main>
-</body>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="brand" href="./index.html" aria-label="TravelBloom home"
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#compass" /></svg
+            ><span
+              >travel<span class="brand-light">bloom</span><i>.</i></span
+            ></a
+          >
+          <p>A little curiosity. A whole world to discover.</p>
+          <a href="#top" class="back-top"
+            >Back to top
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow-up" /></svg
+          ></a>
+        </div>
+        <div class="footer-bottom">
+          <span>TravelBloom · A travel discovery project</span>
+          <div>
+            <a href="./about.html#photography">Photo credits</a
+            ><a
+              href="https://github.com/franxis12/Travel_recomendations_Final_Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View source ↗</a
+            ><span
+              >Built by
+              <a
+                href="https://github.com/franxis12"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Francis Martinez ↗</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <dialog
+      id="destinationDialog"
+      class="destination-dialog"
+      aria-labelledby="dialogTitle"
+    >
+      <button
+        type="button"
+        class="dialog-close"
+        aria-label="Close destination details"
+      >
+        <svg class="icon" aria-hidden="true">
+          <use href="./assets/icons.svg#close" />
+        </svg></button
+      ><img id="dialogImage" src="./assets/new-york.jpg" alt="" />
+      <div class="dialog-content">
+        <p id="dialogCategory" class="eyebrow"></p>
+        <h2 id="dialogTitle"></h2>
+        <p id="dialogDescription"></p>
+        <a
+          id="dialogMap"
+          class="button"
+          href="https://www.google.com/maps"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Explore on the map
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#arrow-up" /></svg
+        ></a>
+        <p class="dialog-note">
+          A little inspiration for your next adventure. TravelBloom does not
+          offer bookings.
+        </p>
+        <a
+          id="dialogCredit"
+          class="photo-credit"
+          target="_blank"
+          rel="noopener noreferrer"
+        ></a>
+      </div>
+    </dialog>
+  </body>
 </html>

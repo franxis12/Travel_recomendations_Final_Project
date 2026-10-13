@@ -1,100 +1,222 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - TravelBloom</title>
-    <link rel="stylesheet" href="./travel_recommendation.css">
-</head>
-<body>
-    <nav class="nav">
-        <div class="navi left">
-            <img class="logo" src="https://cdn-icons-png.flaticon.com/512/7893/7893979.png">
-            <h1>TravelBloom</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a2846" />
+    <meta
+      name="description"
+      content="Meet TravelBloom, a travel discovery portfolio project by Francis Martinez."
+    />
+    <title>Our story — TravelBloom</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./travel_recommendation.css" />
+    <script src="./travel_recommendation.js" type="module"></script>
+  </head>
+  <body class="inner-page" id="top">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header inner-header">
+      <div class="container nav-inner">
+        <a class="brand" href="./index.html" aria-label="TravelBloom home"
+          ><svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#compass" /></svg
+          ><span>travel<span class="brand-light">bloom</span><i>.</i></span></a
+        >
+        <nav id="main-navigation" aria-label="Main navigation">
+          <a href="./index.html">Home</a
+          ><a href="./about.html" aria-current="page">Our story</a
+          ><a href="./contact.html">Get in touch</a>
+        </nav>
+        <a class="nav-explore" href="./index.html#destinations"
+          >Let’s explore
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#arrow-up" /></svg></a
+        ><button
+          type="button"
+          class="menu-toggle"
+          aria-label="Open navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#menu" />
+          </svg>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="container story-hero">
+        <div>
+          <p class="eyebrow">OUR STORY</p>
+          <h1>A little curiosity.<br /><em>A world of possibility.</em></h1>
+          <p>
+            TravelBloom started with a simple idea: a great journey begins long
+            before you pack a bag.
+          </p>
+          <a class="text-link" href="./index.html#destinations"
+            >Find your inspiration
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow" /></svg
+          ></a>
         </div>
-        <div class="navi center">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About Us</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-            </ul>
+        <div class="story-photo">
+          <img
+            src="./assets/bora-bora.jpg"
+            alt="Bora Bora’s turquoise lagoon and overwater bungalows"
+            width="600"
+            height="400"
+          /><span
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#pin" />
+            </svg>
+            Bora Bora, French Polynesia</span
+          >
         </div>
-        <div class="navi right">
-           <form class="searchForm" id="searchForm" style="display: none;">
-                <input id="searchInput" class="searchInput" type="search" placeholder="Enter a destination or keyword">
-                 <button class="btnSearch" type="submit">Search</button>
-                <button class="btnSearch clear" type="button" id="clearBtn">Clear</button>
-            </form>
+      </section>
+      <section class="container story-body">
+        <p class="eyebrow">THE IDEA BEHIND THE JOURNEY</p>
+        <div>
+          <h2>A place to start.<br /><em>Not a plan to follow.</em></h2>
+          <p>
+            Sometimes you know exactly where you want to go. Sometimes you just
+            know you want to go somewhere. TravelBloom is a small collection of
+            cities, beaches, and cultural landmarks to help you take that first
+            step.
+          </p>
+          <p>
+            Search for a destination, explore a category, or follow whatever
+            catches your eye. There are no bookings or complicated itineraries
+            here — just a little room for your next idea to bloom.
+          </p>
         </div>
-    </nav>
-
-    <main class="hero">
-        <div class="socialIcons">
-            <img class="socialIconsLogo" src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:218,cw:563,ch:563,q:80,w:563/z3bn6deaxmrjmQHNEkpcZE.jpg">
-            <img class="socialIconsLogo" src="https://cdn-icons-png.flaticon.com/256/124/124010.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png">
-            <img class="socialIconsLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/1280px-YouTube_full-color_icon_%282017%29.svg.png">
-
-            
+      </section>
+      <section class="container about-principles">
+        <article>
+          <span>01</span>
+          <h3>Stay curious.</h3>
+          <p>
+            Look beyond the familiar. A different city, landscape, or culture
+            can open up a new perspective.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Keep it simple.</h3>
+          <p>
+            Clear descriptions, inspiring photographs, and an easy way to
+            discover what interests you.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Make it your own.</h3>
+          <p>
+            Every traveler sees the world differently. Start with an idea and
+            make the journey yours.
+          </p>
+        </article>
+      </section>
+      <section class="container creator-section">
+        <span class="creator-avatar">FM</span>
+        <div>
+          <p class="eyebrow">BEHIND THE PROJECT</p>
+          <h2>Made by Francis Martinez.</h2>
+          <p>
+            TravelBloom is a web development portfolio project, built with HTML,
+            CSS, and JavaScript. An early project, revisited with a fresh
+            perspective.
+          </p>
         </div>
-        <div class="headerContact">
-            <h1>ABOUT US</h1>
-            <div class="aboutText">
-            <p>Welcome to Our Company! We are a team 
-                of passionate individuals dedicated to providing
-                 excellent services/products to our customers. Our 
-                 mission is to
-                provide the best experience for people traveling to different 
-                destinations around the world. Our values include integrity, 
-                 innovation, customer satisfaction, and teamwork We believe in putting our customers first and working together to achieve
-                 our goals.
-               Feel free to explore our website to learn more about what we offer!
-            </p>
-            </div>
-
-            <div class="contactCardsDiv">
-                <h2>Our <br>Team</h2>
-                <div class="contactCard">
-                    <div class="divImg">
-                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
-                    </div>
-                    <div class="personContact">
-                        <h4>John Doe</h4>
-                        <p>John Doe is responsible for...</p>
-                        <button class="btnContact">CEO</button>
-                    </div>
-
-                </div>
-                <div class="contactCard">
-                    <div class="divImg">
-                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
-                    </div>
-                    <div class="personContact">
-                        <h4>Celina Thomas</h4>
-                        <p>Celina Thomas is responsible for...</p>
-                        <button class="btnContact">Team Lead</button>
-                    </div>
-
-                </div>
-                <div class="contactCard">
-                    <div class="divImg">
-                       <img class="iconContact" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/User_icon-cp.png/1200px-User_icon-cp.png">
-                    </div>
-                    <div class="personContact">
-                        <h4>Mike Tysen</h4>
-                        <p>Mike Tysen is responsible for...</p>
-                        <button class="btnContact">Delivery Head</button>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-           
-            <script src="./travel_recommendation.js"></script>
-
-        </div>
-
+        <a
+          class="button button-outline"
+          href="https://github.com/franxis12/Travel_recomendations_Final_Project"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Explore the code
+          <svg class="icon" aria-hidden="true">
+            <use href="./assets/icons.svg#arrow-up" /></svg
+        ></a>
+      </section>
+      <section class="container photography" id="photography">
+        <details>
+          <summary>
+            Photography & image credits
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#plus" />
+            </svg>
+          </summary>
+          <p>
+            TravelBloom retains the destination photographs referenced by the
+            original project. Original sources are listed below. Images belong
+            to their respective creators.
+          </p>
+          <ul id="photoCredits">
+            <li>
+              New York skyline:
+              <a
+                href="https://www.agoda.com/wp-content/uploads/2024/02/Manhattan-USA.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Agoda</a
+              >.
+            </li>
+            <li>
+              Melbourne:
+              <a
+                href="https://commons.wikimedia.org/wiki/File:Melbourne_yarra_afternoon.jpg"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Melbourne yarra afternoon by Diliff</a
+              >,
+              <a
+                href="https://creativecommons.org/licenses/by/2.5/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CC BY 2.5</a
+              >. Displayed at a smaller size; no creative edits.
+            </li>
+          </ul>
+        </details>
+      </section>
     </main>
-</body>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="brand" href="./index.html" aria-label="TravelBloom home"
+            ><svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#compass" /></svg
+            ><span
+              >travel<span class="brand-light">bloom</span><i>.</i></span
+            ></a
+          >
+          <p>A little curiosity. A whole world to discover.</p>
+          <a href="#top" class="back-top"
+            >Back to top
+            <svg class="icon" aria-hidden="true">
+              <use href="./assets/icons.svg#arrow-up" /></svg
+          ></a>
+        </div>
+        <div class="footer-bottom">
+          <span>TravelBloom · A travel discovery project</span>
+          <div>
+            <a href="./about.html#photography">Photo credits</a
+            ><a
+              href="https://github.com/franxis12/Travel_recomendations_Final_Project"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View source ↗</a
+            ><span
+              >Built by
+              <a
+                href="https://github.com/franxis12"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Francis Martinez ↗</a
+              ></span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>
